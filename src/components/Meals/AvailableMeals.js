@@ -26,12 +26,13 @@ const DUMMY_MEALS = [
     },
   ];
 const AvailableMeals = () => {
+    const mealsList = DUMMY_MEALS.map((meal) => {
+        return <li>{meal.name}</li>
+    });
     return (
         <section className={classes.meals}>
             <ul>
-                {DUMMY_MEALS.map((meal) => {
-                    return <li>{meal.name}</li>
-                })}
+                {mealsList}
             </ul>
         </section>  
     );
