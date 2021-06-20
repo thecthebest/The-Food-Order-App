@@ -1,5 +1,5 @@
 import classes from './MealItem.module.css';
-import MealItemForm from './MealItem/MealItemForm';
+import MealItemForm from './MealItemForm';
 const MealItem = (props) => {
     const price = `£${props.price.toFixed(2)}`;
     return (
