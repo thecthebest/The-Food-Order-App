@@ -8,7 +8,9 @@ const Cart = (props) => {
     const cartCtx = useContext(CartContext);
     const totalAmount = `£${cartCtx.totalAmount.toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
-    const cartItemRemoveHandler = (id) => {};
+    const cartItemRemoveHandler = (id) => {
+        cartCtx.removeItem(id); 
+    };
     const cartItemaddHandler = (item) => {
         cartCtx.addItem({...item, amount: 1});
     };
